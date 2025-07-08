@@ -1,3 +1,5 @@
 h1 {
-    color: blue
+    color: blue;
+    text-align: center;
+    text-orientation: sideways-right;
 }
