@@ -3,6 +3,7 @@
 const repoOwner = "angelvledesma"; // your GitHub username
 const repoName = "website";        // your repo name
 const commitLog = document.getElementById("commit-log");
+const cutoffDate = new Date("2025-07-08T23:59:59-05:00");
 
 fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/commits`)
     .then(response => response.json())
@@ -15,7 +16,7 @@ fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/commits`)
             return commitDate > cutoffDate;
         });
 
-        commits.slice(0, 15).forEach(commit => {
+        filteredCommits.slice(0, 15).forEach(commit => {
             const commitDate = new Date(commit.commit.author.date);
             const options = {
                 timeZone: 'America/Chicago',
@@ -30,7 +31,7 @@ fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/commits`)
             const formattedDate = formatter.format(commitDate);
 
             const message = commit.commit.message;
-            html += `<strong>${formattedDate} CST :</strong> ${message}<br>`;
+            html += `<strong>${formattedDate} CST : </strong>${message}<br`;
         });
         html += "</ul>";
         commitLog.innerHTML = html;
