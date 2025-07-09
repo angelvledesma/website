@@ -31,7 +31,7 @@ fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/commits`)
             const formattedDate = formatter.format(commitDate);
 
             const message = commit.commit.message;
-            html += `<strong>${formattedDate} CST : </strong>${message}<br`;
+            html += `<strong>${formattedDate} CST : </strong>${message}<br>`;
         });
         html += "</ul>";
         commitLog.innerHTML = html;
