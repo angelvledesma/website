@@ -1,27 +1,33 @@
 body {
-background-color: #8c919b;
-background-size: cover;
-background-attachment: fixed;
-}
-
-body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #8c919b;
+    background-size: cover;
+    background-attachment: fixed;
 }
+
 
 .hamburger {
   display: none; 
   font-size: 2.5rem;
-  background: none;
+  background-color: #222;
   border: none;
   color: white;
   cursor: pointer;
+  padding: .4rem .7rem;
+  border-radius: 12px;
+  transition: background-color 0.3s;
+}
+
+.hamburger:hover {
+    background-color: #666;
 }
 
 
 .navbar {
     background-color: #222;
     padding: .5rem 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .5);
 }
 
 .nav-container {
@@ -39,7 +45,7 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     margin: 0;
     padding: 0;
 }
@@ -49,6 +55,14 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
+    padding: .3rem .5rem;
+    border-radius: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: white;
+    color: #222;
 }
 
 .commit-log {
@@ -73,15 +87,17 @@ h1 {
         top: 0;
         right: -250px;
         height: auto;
-        width: 180px;
+        width: 140px;
         background-color: #222;
-        flex-direction: column;;
+        flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         padding: 1.5rem;
         gap: 1.5rem;
         transition: right 0.3s ease;
         z-index: 10;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 1);
     }
 
     .nav-links.show {

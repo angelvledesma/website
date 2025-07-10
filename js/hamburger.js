@@ -2,7 +2,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("nav-links");
-    const navTitle = document.querySelector(".nav-title");
     
     hamburger.addEventListener("click", () => {
         navLinks.classList.toggle("show");
