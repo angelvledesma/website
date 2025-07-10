@@ -3,7 +3,6 @@
     flex-wrap: wrap;
     justify-content: center; /* centers if only 1 panel */
     gap: 15rem;
-    
     padding: 2rem;
 }
 
