@@ -1,7 +1,7 @@
 
 
 const repoOwner = "angelvledesma"; // your GitHub username
-const repoName = "website";        // your repo name
+const repoName = "websitefun";        // your repo name
 const commitLog = document.getElementById("commit-log");
 const cutoffDate = new Date("2025-07-08T23:59:59-05:00");
 
