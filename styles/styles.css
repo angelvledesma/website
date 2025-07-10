@@ -1,0 +1,123 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.hamburger {
+  display: none; 
+  font-size: 2.5rem;
+  background-color: #0D1B2A;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: .4rem .7rem;
+  border-radius: 12px;
+  transition: background-color 0.3s;
+}
+
+.hamburger:hover {
+    background-color: #18324E;
+}
+
+
+.navbar {
+    background-color: #0D1B2A;
+    padding: .5rem 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .5);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-title {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: .3rem .5rem;
+    border-radius: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: white;
+    color: #222;
+}
+
+.commit-log {
+    text-align: center;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+/*Responsive Design for Phones*/
+@media (max-width: 768px) {
+
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        height: auto;
+        width: 140px;
+        background-color: #222;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 1.5rem;
+        gap: 1.5rem;
+        transition: right 0.3s ease;
+        z-index: 10;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 1);
+    }
+
+    .nav-links.show {
+        right: 0;
+    }
+
+    .nav-links li a {
+        font-size: 1.3rem;
+    }
+
+    .nav-container {
+       flex-direction: row;
+       justify-content: space-between;
+       align-items: center;
+    
+    }
+}
