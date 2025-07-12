@@ -5,32 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angel</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/nav.css">
 </head>
 
 <body>
     
-    <nav class="navbar" id="navbar">
-    <div class="nav-container">
-        <div class="nav-title">Angel</div>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+   <nav class="navbar">
+    <div class="navContainer">
+      <div class="navTitle">Angel</div>
 
-        <ul class="nav-links" id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="project.html">Project</a></li>
-            <li><a href="update.html">Update-Log</a></li>
-         </ul>
-         </div>
-</nav>
+      <!-- Desktop Main Links -->
+      <ul class="navMain">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Project</a></li>
+      </ul>
 
+      <!-- Menu Button (mobile & desktop) -->
+      <button class="menuButton" id="menuButton" aria-label="Toggle menu">☰</button>
+    </div>
+
+    <!-- Dropdown Panel for Extra (desktop) or All (mobile) -->
+    <div class="navPanel" id="navPanel">
+            
+      <div class="socialIcons">
+        <a href="https://www.instagram.com/angel_valma/" target="_blank" rel="noopener">
+          <img src="images/instagramIcon.svg" alt="Instagram" title="Instagram"/>
+        </a>
+          
+        <!-- Add more as needed -->
+      </div>
+
+      <hr class="navSeparator">
+
+      <ul class="navMobile navDropdown">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Project</a></li>
+      </ul>
+      <ul class="navExtra navDropdown">
+        <li><a href="update.html">Update Log</a></li>
+      </ul>
+    </div>
+  </nav>
 
 
 <h1>Update Log</h1>
 
-<div id="commit-log">Loading updates...</div>
+<div id="commitLog">Loading updates...</div>
 
 
 <script src="js/updates.js"></script>
-<script src="js/hamburger.js"></script>
+<script src="js/menu.js"></script>
 
 
 </body>

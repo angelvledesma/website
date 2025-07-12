@@ -1,8 +1,8 @@
 
 
 const repoOwner = "angelvledesma"; // your GitHub username
-const repoName = "websitefun";        // your repo name
-const commitLog = document.getElementById("commit-log");
+const repoName = "portfolioTemp";        // your repo name
+const commitLog = document.getElementById("commitLog");
 const cutoffDate = new Date("2025-07-08T23:59:59-05:00");
 
 fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/commits`)

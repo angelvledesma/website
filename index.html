@@ -5,29 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angel</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/frame.css">
+
 </head>
 
-<body>
+<body class="indexBackground">
     
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-title">Angel</div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
-            
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="project.html">Project</a></li>
-                <li><a href="update.html">Update-Log</a></li>
-            </ul>
-        </div>
-    </nav>
+   <nav class="navbar">
+    <div class="navContainer">
+      <div class="navTitle">Angel</div>
 
-<h1>This is Home</h1>
+      <!-- Desktop Main Links -->
+      <ul class="navMain">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Project</a></li>
+      </ul>
+
+
+
+      <!-- Menu Button (mobile & desktop) -->
+      <button class="menuButton" id="menuButton" aria-label="Toggle menu">☰</button>
+    </div>
+
+    <!-- Dropdown Panel for Extra (desktop) or All (mobile) -->
+    <div class="navPanel" id="navPanel">
+            
+      <div class="socialIcons">
+        <a href="https://www.instagram.com/angel_valma/" target="_blank" rel="noopener">
+          <img src="images/instagramIcon.svg" alt="Instagram" title="Instagram"/>
+        </a>
+          
+        <!-- Add more as needed -->
+      </div>
+
+      <hr class="navSeparator">
+
+      <ul class="navMobile navDropdown">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Project</a></li>
+      </ul>
+      <ul class="navExtra navDropdown">
+        <li><a href="update.html">Update Log</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+<div class="frame">
+  <div class="frameLeft">
+    <img src="images/background.png" alt="Picture of Angel" class="profilePic">
+  </div>
+  <div class="frameRight">
+    <h2 class="nameTitle">Angel</h2>
+    <p class="aboutText">
+      Temporary portfolio to showcase my projects. <br>
+      Tell me if you like it or not, I would love to hear your feedback!
+    </p>
+  </div>
+</div>
 
 
 
 <script src="js/scroll.js"></script>
-<script src="js/hamburger.js"></script>
+<script src="js/menu.js"></script>
 
 </body>
 </html>
