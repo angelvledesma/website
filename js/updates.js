@@ -1,16 +1,14 @@
 
-
-const repoOwner = "angelvledesma"; // your GitHub username
-const repoName = "portfolioTemp";        // your repo name
 const commitLog = document.getElementById("commitLog");
 const cutoffDate = new Date("2025-07-08T23:59:59-05:00");
 
-fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/commits`)
+fetch(`https://api.github.com/repos/angelvledesma/portfolioTemp/commits`)
+
     .then(response => response.json())
     .then(commits => {
         let html = "<ul>";
 
-        // Filter only commits after July 8
+
         const filteredCommits = commits.filter(commit => {
             const commitDate = new Date(commit.commit.author.date);
             return commitDate > cutoffDate;
@@ -31,11 +29,12 @@ fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/commits`)
             const formattedDate = formatter.format(commitDate);
 
             const message = commit.commit.message;
-            html += `<strong>${formattedDate} CST : </strong>${message}<br>`;
+            html += `<strong style="color: black;">${formattedDate} CST :</strong> <span style="color: black;">${message}</span><br>`;
         });
         html += "</ul>";
         commitLog.innerHTML = html;
     })
+
     .catch(error => {
         commitLog.innerHTML = "Failed to load updates.";
         console.error(error);

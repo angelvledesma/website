@@ -29,9 +29,16 @@ a {
     font-size: 1.8rem;
     letter-spacing: .05rem;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-    cursor: default;
     font-weight: bold;
     margin-right: auto;
+    cursor: pointer; /* Show hand icon */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.navTitle:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    color: #ffffff;
 }
 
 .navMain {
@@ -42,7 +49,7 @@ a {
 
 .navExtra {
     display: flex;
-    padding-top: 1rem;
+    
 }
 .navMain li a, .navExtra li a, .navMobile li a {
     padding: 0.5rem .5rem;
@@ -73,6 +80,7 @@ a {
 .socialIcons img {
   width: 24px;
   height: 24px;
+  padding-right: .25rem;
   filter: brightness(0) invert(1); /* makes white on dark bg */
   transition: transform 0.2s ease;
 }
@@ -109,7 +117,7 @@ a {
 
 .navPanel {
     width: 150px;
-    background-color: rgba(34, 34, 34, 0.95);
+    background-color: #222;
     backdrop-filter: blur(10px);
     padding: 1.2rem;
     border-radius: 14px;
@@ -167,9 +175,5 @@ a {
         padding-top: 0;
     }
 
-
-    .navPanel {
-        width: auto;
-    }
 
 }
