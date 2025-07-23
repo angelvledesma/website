@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  background-color: black;
+  font-family: sans-serif;
+}
+
+header {
+  background-color: black;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.headNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: .5rem;
+  background-color: black;
+  color: white;
+}
+
+
+ul {
+    display: flex;
+}
+li {
+    display: flex;
+    list-style: none;
+}
+
+.icon {
+    width: 15px;
+    height: auto;
+}
+
+.nav a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+.nav a:hover {
+    font-size: 25px;
+}
+
+
+
+
